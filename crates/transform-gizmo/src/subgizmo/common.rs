@@ -79,8 +79,7 @@ fn arrow_params(config: &PreparedGizmoConfig, direction: DVec3, mode: GizmoMode)
 }
 
 fn arrow_visibility(config: &PreparedGizmoConfig, direction: DVec3) -> f64 {
-    let dot = config.eye_to_model_dir.dot(direction).abs();
-    (1.0 - (dot - *ARROW_FADE.start()) / (*ARROW_FADE.end() - *ARROW_FADE.start())).min(1.0)
+    1.0
 }
 
 pub(crate) fn pick_arrow(
